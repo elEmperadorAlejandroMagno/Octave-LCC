@@ -93,8 +93,8 @@ dimCD = 3
 
 clas_ma(rgT, dimD, dimCD)
 
-u = [1;1;0;1] % [u]B
-Tu = MA*u % [T(u)]B' 
+u = [1;1;0;1] % [u]B componentes del vector u en la base B
+Tu = MA*u % [T(u)]B' componentes del vector u en la base B'
 
 
 
