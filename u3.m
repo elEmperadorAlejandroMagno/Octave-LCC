@@ -152,3 +152,22 @@ vector_org(B, comp_u)
 %ej 12
 printf("Hallar las matrices de paso P = MB->B' y Q = MB'->B\n")
 disp("a)\n")
+B1 = [-1 2 3;-1 -1 2;0 -3 2]
+B2 = [1 1 0;0 2 1;0 0 2]
+
+function matriz_paso(B1, B2, M)
+    B21 = [B2 B1] % intercambiamos lugar de bases
+    esc_B21 = rref(B21) % escalamos, las ultimas 3 columnas forman la matriz de paso
+    printf("%s\n", M)
+    disp(esc_B21(:,columns(esc_B21) - 2 : columns(esc_B21))
+)
+end
+
+matriz_paso(B1, B2, "P = M B->B'")
+
+disp("b)\n")
+printf("Isomorfismo de P1 a R^2")
+B1 = [1 3.2]
+B2 = [-1 -1]
+matriz_paso(B1, B2, "Q = M B'->B")
+
